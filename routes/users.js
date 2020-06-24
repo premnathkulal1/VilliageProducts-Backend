@@ -21,11 +21,11 @@ router.post('/signup', cors.corsWithOptions, (req, res, next) => {
         res.json({err: err});
       }
       else {
-        if(req.body.firstname){
-          user.firstname = req.body.firstname
+        if(req.body.fullname){
+          user.fullname = req.body.fullname
         }
-        if(req.body.lastname){
-          user.lastname = req.body.lastname
+        if(req.body.adress){
+          user.adress = req.body.adress
         }
         user.save((err, user) => {
           if(err) {
